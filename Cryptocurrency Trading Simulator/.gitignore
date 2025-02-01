@@ -1,0 +1,48 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Vite Build & Cache
+.vite/
+.cache/
+output/
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment Variables (Important for API keys)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env*.local
+
+# MacOS & Windows System Files
+._*
+Thumbs.db
+Desktop.ini
+
+# npm & yarn lock files (Choose only one package manager)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
