@@ -1,15 +1,17 @@
+import styles from "./Header.module.css"
+
 
 function Header() {
     return(
 
-        <div className="header">
+        <div className={styles.header}>
             <div>
                 <h1>Cryptocurrency Trading Simulator</h1>
             </div>
             <div>
-                <button className="header-button">Dashboard</button>
-                <button className="header-button">Market</button>
-                <button className="header-button">Trading</button>
+                <button className={styles.headerButton}>Dashboard</button>
+                <button className={styles.headerButton}>Market</button>
+                <button className={styles.headerButton}>Trading</button>
             </div>
         </div>
     );
