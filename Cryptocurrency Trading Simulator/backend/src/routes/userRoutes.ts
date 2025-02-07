@@ -55,7 +55,7 @@ router.post('/user/login', async (req: any, res: any) => {
         }
 
         // TODO: change to uuids
-        const token = jwt.sign({ id: user._id, role: "user" }, process.env.JWT_SECRET, {expiresIn: "30d"}); // Create token expires in 30 days; possibly change to uuids
+        const token = jwt.sign({ id: user._id, username: user.username, role: "user" }, process.env.JWT_SECRET, {expiresIn: "30d"}); // Create token expires in 30 days; possibly change to uuids
 
         res.cookie("token", token, { 
             httpOnly: true, // Prevent cookie from being accessed by client-side scripts
