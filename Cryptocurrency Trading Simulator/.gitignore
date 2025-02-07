@@ -46,3 +46,6 @@ Desktop.ini
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+
+# bun.js
+bun.lock
