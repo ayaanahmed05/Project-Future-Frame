@@ -1,0 +1,23 @@
+.primaryButton {
+    background-color: var(--primary-color);
+
+    font-family: var(--body-font);
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+
+    border-style: none;
+    border-radius: var(--button-corner-radius);
+
+    padding: 0.875rem 2rem;
+
+    cursor: pointer;
+}
+
+.primaryButton:hover {
+    background-color: #5A28E5;
+}
+
+.primaryButton:active {
+    opacity: 0.75;
+}

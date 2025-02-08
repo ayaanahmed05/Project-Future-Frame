@@ -1,0 +1,30 @@
+/* variables.css */
+
+:root {
+    /* Colors */
+    --background-color: #121212;
+    --text-color: #EAEAEA;
+    --primary-color: #6A33FF;
+    --secondary-color: #7F5AF0;
+    --accent-color-1: #F25F4C;
+    --accent-color-2: #FF3FA4;
+    --accent-color-3: #4ADE80;
+    --secondary-text-color: #9B9B9B;
+    --card-background-color: #1A1A1A;
+    --border-color: #2A2A2A;
+    --trading-green: #3ED598;
+    --trading-red: #FF3B30;
+    --input-field-background: #2C2C2E;
+    --hero-gradient-color: #2C2C4A;
+  
+    /* Typography */
+    --heading-font: 'Sora', sans-serif;
+    --body-font: 'Inter', sans-serif;
+  
+    /* Border Radius */
+    --card-corner-radius: 12px;
+    --button-corner-radius: 8px;
+  
+    /* Other */
+    --typescale: 1.33;
+  }
