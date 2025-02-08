@@ -1,6 +1,5 @@
 import { Schema, model } from 'mongoose';
 
-// TODO: change to uuids
 export const userSchema = new Schema({
     uuid: {
         type: String,
