@@ -2,5 +2,6 @@ body {
     /* So that any gaps can be easily seen */
     /* background-color: beige; */
 
-    padding-top: 70px;
+    margin: 0;
+    padding-top: var(--header-height);
 }

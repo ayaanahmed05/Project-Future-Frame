@@ -1,0 +1,52 @@
+.background {
+    background: linear-gradient(to right, var(--background-color), var(--hero-gradient-color));
+
+    width: 100vw;
+    height: calc(100vh - var(--header-height));
+
+    color: white;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contentContainer {
+    width: 40vw;
+
+    margin-left: 8vw;
+}
+
+.contentContainer h1 {
+    font-family: var(--heading-font);
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: -1%;
+    line-height: 110%;
+
+    margin: 0 0 1.5rem 0;
+}
+
+.contentContainer p {
+    font-family: var(--body-font);
+    font-size: 1.25rem;
+    line-height: 140%;
+    color: var(--secondary-text-color);
+
+    margin: 0 0 3rem 0;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+}
+
+.illustration {
+    margin-right: 18vw;
+
+    filter: drop-shadow(0 0 1.5rem rgba(255, 255, 255, 0.75));
+}

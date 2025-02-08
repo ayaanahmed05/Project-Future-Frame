@@ -1,21 +1,8 @@
-<?xml version="1.0" ?>
-<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 32 32" id="_x3C_Layer_x3E_" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<style type="text/css">
-<![CDATA[
-	.st0{fill:none;stroke:#455A64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st1{fill:none;stroke:#263238;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-]]>
-</style>
-<g id="Ethereum_x2C__crypto_x2C__cryptocurrency_1_">
-<g id="XMLID_15_">
-<polygon class="st1" id="XMLID_8_" points="16.01,1.5 7.62,16.23 16.01,21.5 24.38,16.18   "/>
-<line class="st1" id="XMLID_31_" x1="16.01" x2="16.01" y1="30.5" y2="24.1"/>
-<polygon class="st1" id="XMLID_12_" points="16.01,30.5 7.62,18.83 16.01,24.1 24.38,18.78   "/>
-<polygon class="st1" id="XMLID_30_" points="16.01,12.3 7.62,16.23 16.01,21.5 24.38,16.18   "/>
-<line class="st1" id="XMLID_32_" x1="16.01" x2="16.01" y1="1.5" y2="21.5"/>
-<polygon class="st1" id="XMLID_192_" points="16.01,1.5 7.62,16.23 16.01,21.5 24.38,16.18   "/>
-</g>
-</g>
-</svg>
+<svg width="218" height="372" viewBox="0 0 218 372" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M109.125 4.75L4.25 188.875L109.125 254.75L213.75 188.25L109.125 4.75Z" stroke="white" stroke-width="8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M109.125 367.25V287.25" stroke="white" stroke-width="8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M109.125 367.25L4.25 221.375L109.125 287.25L213.75 220.75L109.125 367.25Z" stroke="white" stroke-width="8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M109.125 139.75L4.25 188.875L109.125 254.75L213.75 188.25L109.125 139.75Z" stroke="white" stroke-width="8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M109.125 4.75V254.75" stroke="white" stroke-width="8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M109.125 4.75L4.25 188.875L109.125 254.75L213.75 188.25L109.125 4.75Z" stroke="white" stroke-width="8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

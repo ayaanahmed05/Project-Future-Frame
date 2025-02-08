@@ -1,0 +1,23 @@
+.SecondaryButton {
+    background: transparent;
+
+    font-family: var(--body-font);
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+
+    border: solid 1px white;
+    border-radius: var(--button-corner-radius);
+
+    padding: calc(0.875rem - 1px) calc(2rem - 1px);
+
+    cursor: pointer;
+}
+
+.SecondaryButton:hover {
+    opacity: 0.9;
+}
+
+.SecondaryButton:active {
+    opacity: 0.75;
+}

@@ -6,7 +6,7 @@
     background-color: var(--background-color);
 
     padding: 0 2.5rem;
-    height: 70px;
+    height: var(--header-height);
     
     position: absolute;
     top: 0;
