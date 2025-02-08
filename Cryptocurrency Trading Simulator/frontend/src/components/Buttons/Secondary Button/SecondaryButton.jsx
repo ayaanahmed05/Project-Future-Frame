@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import '../../variables.css';
+import '../../../variables.css';
 import styles from "./SecondaryButton.module.css";
 
 function SecondaryButton(props) {

@@ -1,5 +1,5 @@
 import styles from "./HeroSection.module.css";
-import HeroLogo from "../assets/Hero-Logo.svg";
+import HeroLogo from "../../assets/Hero-Logo.svg";
 import PrimaryButton from "../Buttons/Primary Button/PrimaryButton.jsx"
 import SecondaryButton from "../Buttons/Secondary Button/SecondaryButton.jsx";
 

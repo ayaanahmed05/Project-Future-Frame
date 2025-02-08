@@ -1,5 +1,5 @@
-import Header from "./Header/Header";
-import HeroSection from "./Hero Section/HeroSection";
+import Header from "./components/Header/Header";
+import HeroSection from "./components/Hero Section/HeroSection";
 
 function App() {
     return (

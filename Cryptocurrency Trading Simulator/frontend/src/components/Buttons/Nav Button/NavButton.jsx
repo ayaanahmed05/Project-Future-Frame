@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import '../../variables.css';
+import '../../../variables.css';
 import styles from "./NavButton.module.css";
 
 function NavButton(props) {
