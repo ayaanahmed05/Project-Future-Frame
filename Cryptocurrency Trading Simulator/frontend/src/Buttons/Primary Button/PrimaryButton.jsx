@@ -14,5 +14,9 @@ PrimaryButton.propTypes = {
     label: PropTypes.string
 }
 
+PrimaryButton.defaultProps = {
+    label: "PrimaryButton"
+}
+
 
 export default PrimaryButton;

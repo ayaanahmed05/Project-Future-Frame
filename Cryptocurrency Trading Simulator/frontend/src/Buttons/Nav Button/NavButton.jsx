@@ -14,5 +14,9 @@ NavButton.propTypes = {
     label: PropTypes.string
 }
 
+NavButton.defaultProps = {
+    label: "NavButton"
+}
+
 
 export default NavButton;

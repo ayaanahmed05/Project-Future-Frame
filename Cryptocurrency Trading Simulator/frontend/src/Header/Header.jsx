@@ -1,19 +1,32 @@
-import styles from "./Header.module.css"
+import styles from "./Header.module.css";
+import PrimaryButton from "../Buttons/Primary Button/PrimaryButton";
+import NavButton from "../Buttons/Nav Button/NavButton";
 
 
 function Header() {
-    return(
+    const navButtons = ["Home", "Dashboard", "Market", "Portfolio"];
+    const isLoggedIn = false;
 
-        <div className={styles.header}>
+    return (
+        <nav className={styles.headerContainer} aria-label="Main Navigation">
             <div>
-                <h1>Cryptocurrency Trading Simulator</h1>
+                <p className={styles.companyName}>CryptoTrader</p>
             </div>
-            <div>
-                <button className={styles.headerButton}>Dashboard</button>
-                <button className={styles.headerButton}>Market</button>
-                <button className={styles.headerButton}>Trading</button>
-            </div>
-        </div>
+
+            {/* Nav Buttons, Login Button */}
+            <ul className={styles.navButtonsContainer}>
+
+                {/* Generates HTML code based off navButtons */}
+                {navButtons.map((arrayItem, index) => (
+                    <li key={index}>
+                        <NavButton label={arrayItem} />
+                    </li>
+                ))}
+
+                {/* Renders either a login button or a account button based off of IsLoggedIn */}
+                {isLoggedIn ? <li><p>Logged in</p></li> : <li><PrimaryButton label="Login"/></li>}
+            </ul>
+        </nav>
     );
 }
 

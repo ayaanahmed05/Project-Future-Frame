@@ -1,3 +1,6 @@
 body {
-    background-color: #1A1A1A;
+    /* So that any gaps can be easily seen */
+    /* background-color: beige; */
+
+    padding-top: 70px;
 }
