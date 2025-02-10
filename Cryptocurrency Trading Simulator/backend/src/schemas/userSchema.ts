@@ -1,5 +1,7 @@
 import { Schema, model } from 'mongoose';
 
+import { holdingSchema } from './holdingSchema';
+
 export const userSchema = new Schema({
     uuid: {
         type: String,
@@ -16,6 +18,10 @@ export const userSchema = new Schema({
     },
     balance: {
         type: Number,
+        required: true
+    },
+    holdings: {
+        type: [holdingSchema], // array of holdings (currencies)
         required: true
     },
     schemaVersion: { // development purposes
