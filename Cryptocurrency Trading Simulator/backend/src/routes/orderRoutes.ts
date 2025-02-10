@@ -33,7 +33,7 @@ router.post('/order/create/market', async (req: any, res: any) => {
     const user = await User.findOne({ uuid: userUuid }) as { balance: number; holdings: { currency: string; quantity: number; averagePrice: number; value: number; }[]; };
 
     const cost = quantity * price; // cost of the order
-    const bSufficientFunds: boolean = user.balance >= cost;
+    const bSufficientFunds: boolean = user.balance >= cost; // check if user has sufficient funds
 
     if (!bSufficientFunds) {
         return res.status(400).json({ error: "Insufficient funds" });
@@ -43,15 +43,16 @@ router.post('/order/create/market', async (req: any, res: any) => {
     // TODO: properly handle the quote currency (eg. if user isn't buying/selling USD)
     const quote = pair.split('/')[1]; // currency used to buy/sell
 
-    let holdingExists = false;
+    let holdingExists = false; // check if user already has holdings of the currency in db
 
+    // TODO handle different quote currencies
     user.holdings = user.holdings.map(holding => {
         if (holding.currency === base) {
             holdingExists = true;
             if (side === "buy") {
                 holding.quantity += quantity;
                 holding.value += cost;
-                holding.averagePrice = (holding.averagePrice + price) / holding.quantity;
+                holding.averagePrice = (holding.averagePrice + price) / holding.quantity; // calculate new average price
                 user.balance -= cost;
             } else if (side === "sell") {
                 holding.quantity -= quantity;
@@ -62,12 +63,13 @@ router.post('/order/create/market', async (req: any, res: any) => {
                     // TODO: check if this is correct
                     holding.averagePrice = (holding.value - cost) / holding.quantity;
                 }
-                user.balance += cost;
+                user.balance += cost; 
             }
         }
         return holding;
     });
 
+    // if user doesn't have a "waller" for the currency, create one
     if (!holdingExists) {
         if (side === "buy") {
             user.holdings.push({
@@ -100,8 +102,8 @@ router.post('/order/create/market', async (req: any, res: any) => {
     });
 
     try {
-        await order.save();
-        await User.updateOne({ uuid: userUuid }, user);
+        await order.save(); // store transaction
+        await User.updateOne({ uuid: userUuid }, user); // update user's balance and holdings
         return res.status(200).json({ message: "Order created" });
     } catch (err) {
         return res.status(500).json({ error: err });
