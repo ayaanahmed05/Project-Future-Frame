@@ -1,11 +1,16 @@
 import { Schema, model } from 'mongoose';
 
-// TODO: change to uuids
+import { holdingSchema } from './holdingSchema';
+
 export const userSchema = new Schema({
-    username: {
+    uuid: {
         type: String,
         required: true,
         unique: true
+    },
+    username: {
+        type: String,
+        required: true
     },
     password: {
         type: String,
@@ -15,7 +20,12 @@ export const userSchema = new Schema({
         type: Number,
         required: true
     },
-    schemaVersion: {
+    holdings: {
+        type: [holdingSchema], // array of holdings (currencies)
+        default: [],
+        required: true
+    },
+    schemaVersion: { // development purposes
         type: Number,
         required: true
     }
