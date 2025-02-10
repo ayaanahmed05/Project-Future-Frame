@@ -21,15 +21,15 @@ export const orderSchema = new Schema({
         type: String,
         required: true
     },
-    volume: { 
+    quantity: { 
         type: Number,
         required: true
     },
-    cost: {
+    cost: { // cost of the order (quantity * price)
         type: Number,
         required: true
     },
-    price: {
+    price: { // price of the currency at the time of the order
         type: Number,
         required: true
     },
@@ -38,7 +38,8 @@ export const orderSchema = new Schema({
         required: true
     },
     date: {
-        type: { type: Date, default: Date.now },
-        required: true
+        type: { type: Date, default: Date.now }
     }
 });
+
+export const Order = model('Order', orderSchema);

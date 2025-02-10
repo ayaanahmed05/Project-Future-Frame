@@ -22,6 +22,7 @@ export const userSchema = new Schema({
     },
     holdings: {
         type: [holdingSchema], // array of holdings (currencies)
+        default: [],
         required: true
     },
     schemaVersion: { // development purposes
