@@ -1,4 +1,4 @@
-import { Schema, model } from 'mongoose';
+import {Schema, model} from 'mongoose';
 
 export const orderSchema = new Schema({
     uuid: {
@@ -11,34 +11,42 @@ export const orderSchema = new Schema({
     },
     side: { // buy or sell
         type: String,
+        enum: ['buy', 'sell'],
         required: true
     },
-    orderType: { // market orders for now TODO: add limit orders
+    orderType: { // market orders for now TODO: add limit orders -> COMPLETED but check over
         type: String,
+        enum: ['market', 'limit'],
         required: true
     },
     pair: { // pairs are the two cryptocurrencies that are being traded (e.g. BTC/USD)
         type: String,
         required: true
     },
-    quantity: { 
+    quantity: {
         type: Number,
         required: true
     },
     cost: { // cost of the order (quantity * price)
         type: Number,
-        required: true
+        required: function (this: any) { return this.orderType === 'market'; }
     },
     price: { // price of the currency at the time of the order
         type: Number,
-        required: true
+        required: function(this: any) { return this.orderType === 'limit'; }
     },
-    filled: {
+    filled: { // market order execute immediately
         type: Boolean,
-        required: true
+        default: function (this:any) { return this.orderType === 'market'; }
+    },
+    status: { // tracks whether order is still active or completed (pending, filled, or canceled for limit orders)
+        type: String,
+        enum: ['pending', 'filled', 'canceled'],
+        default: function (this:any) { return this.orderType === 'market' ? 'filled' : 'pending'; }
     },
     date: {
-        type: { type: Date, default: Date.now }
+        type: Date,
+        default: Date.now
     }
 });
 

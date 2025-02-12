@@ -60,8 +60,8 @@ router.post('/order/create/market', async (req: any, res: any) => {
                 if (holding.quantity === 0) {
                     holding.averagePrice = 0;
                 } else {
-                    // TODO: check if this is correct
-                    holding.averagePrice = (holding.value - cost) / holding.quantity;
+                    // TODO: Verify against edge cases (e.g., very large/small quantities)
+                    holding.averagePrice = ((holding.averagePrice * (holding.quantity - quantity)) + (price * quantity)) / holding.quantity;
                 }
                 user.balance += cost; 
             }
@@ -104,12 +104,16 @@ router.post('/order/create/market', async (req: any, res: any) => {
     try {
         await order.save(); // store transaction
         await User.updateOne({ uuid: userUuid }, user); // update user's balance and holdings
-        return res.status(200).json({ message: "Order created" });
+        return res.status(200).json({ message: "Order created", order });
     } catch (err) {
         return res.status(500).json({ error: err });
     }
 });
 
 // TODO: add limit orders
+// 1. store the limit order in the database with "pending" status
+// 2. execute when market conditions match limit price
+// 3. implement the buy/sell queue
+
 
 export default router;
